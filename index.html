@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Welcome to my portfolio website. Explore my projects, learn about me, and subscribe for updates.">
+    <meta name="keywords" content="Portfolio, Web Developer, Projects, About Me, Subscribe">
+    <meta name="author" content="Sandip Bhatta">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Portfolio Website - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#subscribe">Subscribe</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="profile.jpg" alt="My phtoto">
+            </div>
+            <div class="hero-text">
+                <h1>Hey, I'm Sandip
+                    I'm a Designer and Developer</h1>
+                <p>Passionate web developer creating modern, user-friendly websites. Constantly learning and exploring
+                    new ideas to build innovative digital experiences.
+                </p>
+                <a href="#projects" class="btn">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <p class="intro">
+                    👋 Hey there! I'm <strong>Sandip Bhatta</strong>, a passionate web developer with a deep interest in
+                    real-world problem-solving through technology. From designing sleek user interfaces to building
+                    dynamic web applications, I thrive on crafting digital experiences that are both aesthetic and
+                    functional.
+                </p>
+                <p>
+                    Currently, I'm diving deep into the <strong>MERN stack</strong>, mastering MongoDB, Express.js,
+                    React, and Node.js to create scalable and efficient web applications. My journey doesn't stop
+                    there—I also explore graphic design, blending creativity with technology to deliver visually
+                    compelling projects.
+                </p>
+                <h2>💡 What drives me?</h2>
+                <ul>
+                    <li>Building modern & responsive websites</li>
+                    <li>Learning and implementing real-world tech solutions</li>
+                    <li>Exploring the intersection of web development and design</li>
+                    <li>Continuously growing as a full-stack developer</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="developer-summary">
+            <p>✨ "I’m a builder of <strong>websites</strong>, <strong>ideas</strong>, and
+                <strong>opportunities</strong>. With a passion for technology, an eye for design, and a <strong>growth
+                    mindset</strong>, I turn visions into impactful digital experiences."
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h1>Projects</h1>
+        <p>Here are some of my recent works. Click on a project to learn more.</p>
+        <div class="project-cards">
+            <!-- E-commerce Project Card -->
+            <div class="project-card">
+                <img src="e-commerce 11.png" alt="E-commerce Project">
+                <h2>E-commerce Website</h2>
+                <p>Currently in progress: Building a scalable online store.</p>
+                <button class="learn-more-btn" onclick="openModal('ecommerce-modal')">Learn More</button>
+            </div>
+
+            <!-- Blog Project Card -->
+            <div class="project-card">
+                <img src="blog-final.png" alt="Blog Project">
+                <h2>Blog Platform</h2>
+                <p>Currently in progress: Developing a modern blogging platform.</p>
+                <button class="learn-more-btn" onclick="openModal('blog-modal')">Learn More</button>
+            </div>
+        </div>
+
+        <!-- E-commerce Modal -->
+        <div id="ecommerce-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('ecommerce-modal')">&times;</span>
+                <h2> E-Commerce Beauty & Skincare Store</h2>
+                <p>A modern, responsive e-commerce website offering a wide range of beauty and skincare products.
+                    Featuring easy navigation, secure checkout, and personalized recommendations, it ensures a smooth
+                    shopping experience. Browse, shop, and take care of your skin effortlessly with our curated
+                    collection of top-rated products.</p>
+            </div>
+        </div>
+
+        <!-- Blog Modal -->
+        <div id="blog-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal('blog-modal')">&times;</span>
+                <h2>Exploring the World Through Geography</h2>
+                <p>
+                    Our blog takes you on an exciting journey across the globe, featuring interesting facts, insights,
+                    and stories about every country. Dive into our growing collection of engaging content, designed to
+                    spark your curiosity and expand your knowledge of the world!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section id="subscribe">
+        <h1>Subscribe</h1>
+        <p>Stay updated with my latest projects and blog posts. Subscribe to my newsletter.</p>
+        <form action="#" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Sandip Bhatta. All Rights Reserved.</p>
+            <div class="footer-social-links">
+                <a href="https://www.linkedin.com/in/sandipbhatta-dev" target="_blank" class="footer-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/_sandiphoraa?igsh=NW8zbzF2cTJqaGRv" target="_blank"
+                    class="footer-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/sandip-dev-max" target="_blank" class="footer-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

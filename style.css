@@ -1,0 +1,716 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #121212;
+    /* Dark background */
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1a1a;
+    /* Slightly lighter dark for contrast */
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav .logo {
+    color: #ffffff;
+    /* Modern accent color */
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Navigation Bar List Items */
+nav ul li {
+    display: inline-block;
+    background-color: #1f1f1f;
+    /* Slightly darker background for each item */
+    padding: 10px 15px;
+    border-radius: 5px;
+    /* Rounded corners for a modern look */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    background-color: #00bcd4;
+    /* Highlight background on hover */
+    transform: scale(1.05);
+    /* Slight zoom effect */
+}
+
+nav ul li a:hover {
+    color: #121212;
+    /* Dark text on hover for contrast */
+}
+
+/* Section Styling */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00bcd4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Buttons */
+button {
+    background-color: #0098ac;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #49eaff;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    section h1 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    section h1 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1f1f1f, #121212); /* Deep black gradient */
+}
+
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Hero Image Styling */
+.hero-image {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.hero-image img {
+    width: 200px;
+    /* Adjust size as needed */
+    height: 200px;
+    border-radius: 50%;
+    /* Makes the image round */
+    border: 5px solid #edf3f4;
+    /* Accent border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow */
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    /* Slightly deeper shadow */
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    /* Slightly larger than the image */
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    /* Dark gradient */
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+    /* Subtle glow */
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    /* Larger outer circle */
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #121212, #1a1a1a);
+    /* Slightly darker gradient */
+    z-index: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    /* Subtle outer shadow */
+}
+
+.hero-text {
+    flex: 1;
+    color: #fff;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-text .btn:hover {
+    background-color: #008c9e;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
+/* About Section */
+#about {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1e1e1e, #2b2b2b, #1a1a1a); /* Smooth dark gray gradient */
+    color: #fff;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    /* Accent color */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ccc;
+    text-align: left;
+}
+
+.about-content .intro {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-content strong {
+    color: #00bcd4;
+    /* Highlighted text */
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    color: #00bcd4;
+    margin: 20px 0;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-content ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    color: #ccc;
+}
+
+.about-content ul li::before {
+    content: "•";
+    color: #00bcd4;
+    /* Accent bullet point */
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.about-content p:last-child {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about h1 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        font-size: 1rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #about h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-content {
+        font-size: 0.9rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Developer Summary Styling */
+.developer-summary {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(31, 31, 31, 0.95);
+    /* Slightly darker semi-transparent background */
+    color: #fff;
+    border-left: 5px solid transparent;
+    /* Gradient border effect */
+    border-image: linear-gradient(135deg, #00bcd4, #008c9e);
+    border-image-slice: 1;
+    border-radius: 10px;
+    /* Slightly more rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    /* Enhanced shadow for depth */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+    position: relative;
+    /* To position the photo inside */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.developer-summary:hover {
+    transform: scale(1.02);
+    /* Slight zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    /* Deeper shadow on hover */
+}
+
+.developer-summary p {
+    margin: 0;
+    color: #ddd;
+    /* Slightly lighter text for better readability */
+    font-style: Verdana;
+
+    /* Adds a subtle style to the text */
+    strong {
+        color: #008c9e;
+        /* Accent color for strong text */
+    }
+}
+
+/* Projects Section */
+#projects {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1f1f1f, #121212); /* Deep black gradient */
+    color: #fff;
+    text-align: center;
+}
+
+#projects h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+#projects p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h2 {
+    font-size: 1.5rem;
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.project-card .learn-more-btn {
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.project-card .learn-more-btn:hover {
+    background: #008c9e;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+    /* Gradient background for a modern look */
+    padding: 30px;
+    border-radius: 15px;
+    /* More rounded corners */
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    /* Enhanced shadow for depth */
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    /* Smooth fade-in animation */
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    color: #00bcd4;
+    /* Accent color */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.modal-content .btn {
+    background: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.modal-content .btn:hover {
+    background: #008c9e;
+    transform: scale(1.05);
+    /* Slight zoom effect */
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #00bcd4;
+    /* Accent color on hover */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .modal-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-content p {
+        font-size: 0.9rem;
+    }
+
+    .modal-content .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+/* Subscribe Section */
+#subscribe {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1e1e1e, #2b2b2b, #1a1a1a); /* Smooth dark gray gradient */
+    color: #fff;
+    text-align: center;
+}
+
+#subscribe h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+#subscribe p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+#subscribe form {
+    margin-bottom: 30px;
+}
+
+#subscribe input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 250px;
+    max-width: 100%;
+}
+
+#subscribe button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#subscribe button:hover {
+    background: #008c9e;
+}
+
+/* Footer Section */
+#footer {
+    background:linear-gradient(135deg, #1f1f1f, #121212); /* Deep black gradient */
+    color: #ccc; /* Light text color */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid #333; /* Subtle border for separation */
+}
+
+#footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+    color: #ccc;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    color: #00bcd4; /* Accent color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #footer p {
+        font-size: 0.9rem;
+    }
+
+    .footer-icon {
+        font-size: 1.3rem;
+    }
+}
